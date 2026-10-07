@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard - HealthDesk</title>
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <meta
+        name="theme-color"
+        content="#2e8b57"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="top-header">
+
+        <div class="header-logo">
+
+            <img
+                src="icon-192.png"
+                alt="HealthDesk Logo"
+            >
+
+        </div>
+
+
+        <div class="header-title">
+
+            <h1>HEALTHDESK</h1>
+
+            <p>Clinic Administrator</p>
+
+        </div>
+
+    </header>
+
+
+    <nav class="page-nav">
+
+        <a href="admin.html">
+            Admin Dashboard
+        </a>
+
+        <button
+            id="adminLogoutBtn"
+            type="button"
+        >
+            Log Out
+        </button>
+
+    </nav>
+
+
+    <main class="admin-dashboard">
+
+
+        <section class="welcome-section">
+
+            <h1>
+                Clinic Administrator
+            </h1>
+
+            <p>
+                Manage student clinic appointments.
+            </p>
+
+        </section>
+
+
+        <section class="stats-container">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📋
+                </div>
+
+                <h3>
+                    Total
+                </h3>
+
+                <strong id="adminTotal">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ⏳
+                </div>
+
+                <h3>
+                    Pending
+                </h3>
+
+                <strong id="adminPending">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Approved
+                </h3>
+
+                <strong id="adminApproved">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <section class="admin-section">
+
+            <h2>
+                Student Appointments
+            </h2>
+
+
+            <div id="adminAppointments">
+
+                <div class="empty-dashboard">
+
+                    <span>
+                        📋
+                    </span>
+
+                    <p>
+                        Loading appointments...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 HealthDesk - School Clinic
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+    <script>
+
+        if ("serviceWorker" in navigator) {
+
+            navigator.serviceWorker.register(
+                "./service-worker.js"
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
